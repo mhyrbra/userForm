@@ -1,0 +1,32 @@
+.searchBox {
+  max-width: 80%;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid;
+  text-align: right;
+  direction: rtl;
+  box-shadow: 2px 2px 5px;
+}
+
+.innerBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0.5rem;
+  flex-direction: row;
+  border: 1px solid;
+  text-decoration: none;
+}
+
+.userInput {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.searchBox button {
+  padding: 0.2rem 0.5rem;
+}
+
+.searchBox h3 {
+  margin: 1rem;
+}

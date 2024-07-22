@@ -1,0 +1,18 @@
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid;
+  padding: 1rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
