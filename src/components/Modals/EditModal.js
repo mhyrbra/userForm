@@ -3,7 +3,7 @@ import Backdrop from "./Backdrop";
 import classes from "./AddAndEditModal.module.css";
 import { useState } from "react";
 
-const EditModal = ({ onCLose, onEdit }) => {
+const EditModal = ({ onCLose, onEdit, userData }) => {
   const [userInput, setUserInput] = useState({
     name: "",
     last_name: "",
@@ -24,6 +24,7 @@ const EditModal = ({ onCLose, onEdit }) => {
         <form className={classes.body} onSubmit={onEdit.bind(null, userInput)}>
           <label htmlFor="name">نام</label>
           <input
+            placeholder={userData.name}
             required
             type="text"
             id="name"
@@ -37,6 +38,7 @@ const EditModal = ({ onCLose, onEdit }) => {
           />
           <label htmlFor="lastName">نام خانوادگی</label>
           <input
+            placeholder={userData.last_name}
             required
             type="text"
             id="lastName"
@@ -50,6 +52,7 @@ const EditModal = ({ onCLose, onEdit }) => {
           />
           <label htmlFor="nationalCode">کد ملی</label>
           <input
+            placeholder={userData.national_code}
             required
             type="number"
             id="nationalCode"

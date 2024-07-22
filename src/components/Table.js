@@ -36,7 +36,11 @@ const Table = ({ userInfo, onClickView, onCLickEdit, onClickDelete }) => {
                 />
                 <FaSquarePen
                   className={classes.icon}
-                  onClick={onCLickEdit.bind(null, data.national_code)}
+                  onClick={onCLickEdit.bind(null, {
+                    name: data.name,
+                    last_name: data.last_name,
+                    national_code: data.national_code,
+                  })}
                 />
                 <FaLocationDot className={classes.icon} />
                 <FaTrashCan

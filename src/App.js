@@ -14,6 +14,7 @@ function App() {
   const [showViewModal, setShowViewModal] = useState(false);
   const [viewModalData, setViewModalData] = useState({});
   const [showEditModal, setShowEditModal] = useState(false);
+  const [editModalData, setEditModalData] = useState();
   const [editModalIndex, setEditModalIndex] = useState();
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [deleteModalId, setDeleteModalId] = useState();
@@ -47,12 +48,13 @@ function App() {
     setViewModalData(data);
   }
 
-  function EditModalHandler(id) {
+  function EditModalHandler(userData) {
     const targetUserIndex = userInfo.findIndex(
-      (user) => user.national_code === id
+      (user) => user.national_code === userData.national_code
     );
     setShowEditModal((prevState) => !prevState);
     setEditModalIndex(targetUserIndex);
+    setEditModalData(userData);
   }
 
   function EditHandler(userInput) {
@@ -95,6 +97,7 @@ function App() {
             setShowEditModal(false);
           }}
           onEdit={EditHandler}
+          userData={editModalData}
         />
       )}
       {showDeleteModal && (
